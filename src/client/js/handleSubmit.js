@@ -26,6 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
 const handleSubmit = async (e) => {
   e.preventDefault();
 
+  if (input.value == "") {
+    alert("please enter a valid URL , Don't leave it blank");
+    return;
+  }
+
   // export url validate function
   if (!validate(input.value)) {
     show_error();
